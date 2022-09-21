@@ -1,0 +1,12 @@
+name: Uncontrolled Value Example
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "A demo job to test uncontrolled values"
+      - run: echo "should not use ${{ github.event.pull_request.title }}"
+      - run: echo "should not use ${{ github.event.actor.id }}"
+      - run: echo "should not use ${{ github.event.actor.login }}"
+      - run: echo "should not use ${{ github.event.actor.display_login }}"
+      - run: echo "should not use ${{ github.event.org.login }}"
